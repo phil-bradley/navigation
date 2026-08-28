@@ -817,7 +817,7 @@ Note that the directions have a subscript of T, M or C for True, Magnetic and Co
 	colframe=black,       % border color
 	boxrule=0.5pt,        % thin border
 	arc=0pt,               % sharp corners (remove for rounded)
-	left=8pt, right=8pt, top=6pt, bottom=6pt,
+	left=4pt, right=4pt, top=6pt, bottom=6pt,
 	width=0.8\linewidth,
 	]
 	\textbf{Why do we add the variation value?}\\
@@ -899,7 +899,187 @@ In conclusion, our tidal vector will be 068° at 1.8 kts.
 
 If we were to travel from point F, due West (270°) at a speed of 8 kts, we might expect that after one hour, our position would be 8 nm (nautical miles) to the West of point F. However, since the tide is pushing us in direction 068° (approximately Northeast) at a speed of 1.8 kts, we will end up slightly to the North and we will have covered less distance as well.
 
-We have all of the information that we need in order to work out our estimated position after 1 hour, we can do this as follows:
+We have all of the information that we need in order to work out our estimated position after 1 hour, we can do this as follows:\\
+
+
+\textbf{Step 1}\\
+Draw a line on the chart starting at point F (the diamond below) and pointing in direction 270° (west). The length of this line should be 8 nm as measured on the chart. This line is called the water track and should be drawn with a single arrow as below.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Vectors/vector-west.png} 
+\end{center}
+
+You can use a dividers to measure out 8 nm on the chart scale (be sure to use the vertical scale on either side of the chart).
+
+\textbf{Step 2}\\
+Draw the tidal vector starting at the end of your water track. The direction of the tidal vector will be 068° based on the workings above and the length will be 1.8 nm as measured on the chart vertical scale.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Vectors/vector-west-northeast.png} 
+\end{center}
+
+The estimated position after 1 hour is shown with the blue dot. Of course, in reality, the speed and direction of the tide won’t be constant over the hour but this is still a reasonable  estimate.
+
+The line that joins the starting point to the blue dot is the ground track.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Vectors/vector-west-northeast-northwest.png} 
+\end{center}
+
+
+\newpage
+\section{Plotting a Course To Steer}
+Continuing with the scenario above, let’s imagine we want to reach a point 10 nm West of point \textbf{\textit{F}}. We know that if we simply point the vessel due West we will not reach our destination. To work out what direction we should take, we can take the following steps:\\
+
+\textbf{Step 1}\\
+Plot the course that we would like to take, this is our ground track. Measure 10 nm against the chart vertical scale using a dividers, this will be the length of our ground track. Here, our destination is marked with D.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Vectors/vector2-west.png} 
+\end{center}
+
+Plot the tidal vector. This time, the tidal vector should begin at our starting position unlike our EP calculation where it begins at the end of the water track.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Vectors/vector2-west-northeast.png} 
+\end{center}
+
+\textbf{Step 3}\\
+Our boat has a speed of 8 kts so using a dividers, measure 8 nm against the chart scale.  Then, place one end of the dividers on the blue dot and arc it so that it cuts the ground track. This point is marked below with a black vertical line and it’s our estimated position after 1 hour. Don’t worry if you overshoot your destination, if your destination is less than 1 hour away this will happen but the calculation works regardless.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Vectors/vector2-west-northeast-southwest.png} 
+\end{center}
+
+\vspace{20pt}
+
+\begin{center}
+	\begin{tcolorbox}[
+		colback=gray!10,      % light grey background
+		colframe=black,       % border color
+		boxrule=0.5pt,        % thin border
+		arc=0pt,               % sharp corners (remove for rounded)
+		left=4pt, right=4pt, top=6pt, bottom=6pt,
+		width=0.8\linewidth,
+		]
+		\textbf{Caution}\\
+		You might be tempted to join the blue dot to the destination. This will not give you the answer that you need. You should fix the length and see where it cuts the ground track. This might be before or after your destination. Very rarely, it could be exactly at your destination but this will just be coincidence.
+	\end{tcolorbox}
+\end{center}
+
+\vspace{20pt}
+
+The dotted line joining the blue dot and this point is the water track. To determine the angle of the water track, place the edge of the plotter along this track (remember to point it in the direction of travel). Turn the compass rose until the arrows are pointing directly up and read off the value off the plotter. In this case, it should be approximately 266°. 
+
+This value is the true compass reading so it should properly be written as 266°\textsubscript{T}. We now need to convert this into a compass reading by taking variation and deviation into account. We will use the same table as before. As with the original sample computation, we’re assuming magnetic variation of 006° West.
+
+\newpage
+First, we fill in the true reading and the variation. This gives us 272°\textsubscript{M}. 
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		True & Variation & Magnetic & Deviation & Compass \\
+		\hline
+		266°\textsubscript{T} & 006°W & 272°\textsubscript{M} & ??? & ??? \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+Next, take the value 272° and look up the compass deviation card. According to the card, our deviation at 270° is approximately 5° East. Since it’s in the Easterly direction, we will need to subtract this value rather than add it.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		True & Variation & Magnetic & Deviation & Compass \\
+		\hline
+		266°\textsubscript{T} & 006°W & 272°\textsubscript{M} & 005° East & 267°\textsubscript{C} \\
+		\hline
+	\end{tabular}
+\end{center}
+
+So our course to steer (CTS) is 267°\textsubscript{C}.
+
+
+\newpage
+\section{Speed Over Ground (SOG)}
+In the above example, we know that our speed over water will be 8 kts. What about our speed over ground? This is the effective speed that we will achieve when we take the tide into account.
+
+To figure out our speed over ground, we need to work out the length of the ground track. We can do this by extending the dividers over this line. Then place the dividers against the vertical (latitude) scale on the chart, this will give you the distance covered in nautical miles. One minute on the vertical scale corresponds to 1 nautical mile (this is the original definition of the nautical mile). In this case, it should be approximately 6.3 nm.
+
+Since we have based the calculations on travelling for 1 hour, this means that our effective speed (speed over ground) was 6.3 kts.
+
+\vspace{10pt}
+\begin{center}
+	\begin{tcolorbox}[
+		colback=gray!10,      % light grey background
+		colframe=black,       % border color
+		boxrule=0.5pt,        % thin border
+		arc=0pt,               % sharp corners (remove for rounded)
+		left=4pt, right=4pt, top=4pt, bottom=4pt,
+		width=0.8\linewidth,
+		]
+		Be careful to use the vertical scale (latitude) on the chart for measuring distances, this gives you the simple rule of 1 minute = 1nm. If you were to use the lines of longitude to calculate distance on a chart, you would need to do further calculations to translate the angle into a distance. This is because the lines of longitude are not really parallel and plotting them this way on a chart distorts distances..
+	\end{tcolorbox}
+\end{center}
+
+\vspace{20pt}
+
+
+\newpage
+\section{Fixing Your Position}
+It is possible to determine your position by taking the bearing of landmarks that are identifiable on a chart. You can use these bearing to plot a track between your current location and the landmarks. 
+
+With a single bearing, you won’t know your position, only that you are somewhere on the track that you plotted. With a second bearing, you can fix your position as the intersection between the two plotted tracks. However, to give reasonable certainty, you should always take at least three bearings. 
+
+When you take three bearings, you will likely find that the three lines don’t intersect exactly at a single point, instead you will end up with a triangle. This smaller the triangle, the more precise your location.
+
+You will typically take bearings with a hand compass at the front of the boat and as such, your readings should  not be subject to the boats magnetic deviation. You will still need to take variation into account. In the example below, we will continue to assume magnetic variation of 006° West.
+
+Firstly, holding your hand compass at eye level, you can see the flashing green marker; the compass reading is 262°. Adjusted for magnetic variation, this gives a value of 256°\textsubscript{T}. 
+
+Turn the dial on your plotter to 256 and then place the plotter on the chart so that the edge touches the point on the green marker. Position the plotter so that the two arrows are pointing directly up. There is usually a grid on the plotter to help you get this exactly in line.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Position-01.png} 
+	    \captionof{figure}{Plotter lined up with a flashing green marker, this is indicated with 2F.G}
+\end{center}
+
+\newpage
+Now draw a line on your chart along the edge of the plotter that touches the landmark as shown in red below
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Position-02.png} 
+\end{center}
+
+At this point, we know that we are somewhere along the red track. A second reading will fix our position and a third one will give us some extra certainty.
+
+Our next bearing is the flashing red markers at 096°C, that is, 090°\textsubscript{T}. Rotate the rose on the plotter until it reads 090° and place it on the chart with the arrows pointing towards the flashing red markers.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Position-03.png} 
+\end{center}
+
+\newpage
+As before, draw a track along the edge of the plotter, this track is shown in orange below.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Position-04.png} 
+\end{center}
+
+At this point, we can fix our position at the intersection between the red and orange tracks. However, a third bearing will give us a little more confidence.
+
+If the bearing for Eilean Beag is 352°\textsubscript{C}, corresponding to 346°\textsubscript{T}, the as before, dial the compass rose to 346 and place it on the chart with the edge passing through your bearing point. Draw a track along this edge. 
+
+In an ideal world, all of you readings would be perfect and all three lines would intersect at a single point. In reality, it’s likely that you will get a triangle as shown below.
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Position-05.png} 
+\end{center}
+
+The smaller this triangle is, the better. If you get a very large area, that suggests that you might have an error in your fix so it’s worth checking your workings for possible errors.
+
 
 
 \end{document}
