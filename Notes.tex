@@ -8,7 +8,12 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
 \usepackage[margin=2.5cm]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+
+
 
 \title{Notes on Navigation}
 \author{Philip Bradley}
@@ -638,6 +643,263 @@ The table below shows the height of the tide at North Wall in Dublin during the 
 
 \newpage
 \section{Chart Symbols}
+
+Bouyage marks such as lateral marks, cardinal marks etc. are not usually printed in colour on navigation charts, instead the colour is indicated as an abbreviation as per the list below:
+
+\begin{tabular}{ |c|c| }
+	\hline
+	R & Red \\
+	\hline
+	G & Green \\
+	\hline
+	Y & Yellow \\
+	\hline
+	W & White \\
+	\hline
+	B & Black \\
+	\hline
+	Bu & blue \\
+	\hline 
+\end{tabular}
+
+Combinations are indicated as a sequence of these letters, come common examples are shown below.
+
+\begin{tabular}{ |c|c| }
+	\hline
+	RGR & Red, Green, Red\\
+	\hline
+	GRG & Green, Red, Green \\
+	\hline
+	BRB & Black, Red, Black \\
+	\hline
+	RW & Red, White \\
+	\hline
+\end{tabular}
+
+Similarly, where marks have lights, the pattern is indicated using a code. Some common examples are listed below.
+
+\begin{tabularx}{\textwidth}{ |c|c|X| }
+	\hline
+	F & Fixed & A continuous light \\
+	\hline
+	Occ & Occulting & A light with periodic darkness. The duration of the darkness will be shorter than the light \\
+	\hline
+	Iso & Isophase & Equal durations of light and dark \\
+	\hline
+	Fl & Flashing & Periodic lighting. The duration of the light will be shorter than the dark. \\
+	\hline
+	LFl & Flashing (Long) & A flash that lasts longer than 2 seconds \\
+	\hline
+	Q & Quick & Flashing but at higher frequency, 50 – 79 flashes per minute \\
+	\hline
+	VQ & Very Quick & Flashing at a frequency of 80 – 159 flashes per minute \\
+	\hline
+	UQ & Ultra Quick & Flashing at a frequency of 160 per minute or higher \\
+	\hline
+	M & Morse & Flashing in the morse pattern for the indicated letter. \\
+	\hline
+\end{tabularx}
+
+The pattern should be followed by a colour, for example \textit{\textbf{F R}} would indicate a fixed red light. With patterns other than fixed, a duration will also be required. For example, \textbf{\textit{Fl G 5s}} would indicate that a green light flashes every 5 seconds.
+
+\newpage
+The symbols used various marks, along with their colour indicators are shown below:
+
+\begin{longtable}{|c|c|}
+	\hline
+	Port hand lateral marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_port.png} \\
+	\hline
+	Starboard hand lateral marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_starboard.png} \\
+	\hline
+	Preferred channel to port & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_perferred_port.png} \\
+	\hline
+	Preferred channel to starboard & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_preferred_starboard.png} \\	
+	\hline
+	Isolated danger mark & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_isolated_danger.png} \\	
+	\hline
+	Safe water marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_safe_water.png} \\	
+	\hline
+	Cardinal marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_cardinal_marks.png} \\	
+	\hline	
+\end{longtable}
+
+
+\chapter{Navigation}
+
+\section{Determining Direction Using a Plotter}
+
+A plotter can be used to determine the direction of travel between two points on a chart. If you’re planning a trip, you will need to apply some further adjustments to this figure before you can use it. The adjustments are explained in more detail in the sections that follow. For the moment, let’s stick to direction as the crow flies.
+
+To take our first example, let’s find the direction of travel when going from Ledaig Point (marked A) to the Jetties at point B
+
+\begin{center}
+	\includegraphics[width=0.9\linewidth]{resources/Plot-01.png} 
+\end{center}
+
+\newpage
+
+\textbf{Step 1}\\
+Place your plotter on the chart with the edge of the plotter joining points A and B. Be careful of the direction, the blue arrow should point in the direction you want to travel (if the plotter is pointed in the opposite direction then all figures will be off by 180 degrees).
+
+\begin{center}
+	\includegraphics[width=0.9\linewidth]{resources/Plot-02.png} 
+\end{center}
+
+\textbf{Step 2}\\
+Rotate the centre compass rose until the two blue arrows are pointing directly up
+
+\begin{center}
+	\includegraphics[width=0.9\linewidth]{resources/Plot-03.png} 
+\end{center}
+
+
+\newpage
+\textbf{Step 3}\\
+Read the value off the plotter, it will be the number on the line that indicates your course direction. In this case, it looks like our heading will be 120 degrees.
+
+\begin{center}
+	\includegraphics[width=0.6\linewidth]{resources/Plotter.png} 
+\end{center}
+
+
+\newpage
+\section{Magnetic Variation and Deviation}
+
+It is very convenient for navigators that the earth has a magnetic field and that the North pole of this magnetic field is very close to the top of the axis of rotation of the earth (the geographic North). The end result is that you can hold out a compass and it will tend to point North.
+
+While the above is mostly true, the geographic and magnetic Norths are not exactly aligned and if you don’t take this into account, you will not be taking the course that you expect to take.
+
+The difference between the magnetic and geographic North is called \textbf{\textit{magnetic variation}} and the extent of variation depends on where you are on the Earth. Since the Earths magnetic field shifts over time, the extent of magnetic variation also changes over time although this is a very slow process, approximately 2 – 2.5 degrees per 100 years.
+
+Furthermore, compass readings can be influenced by local factors. On a boat, this might be due to magnetised iron in the structure of the vessel. These localised effects are called magnetic deviation. 
+
+The degree of magnetic deviation can often depend on the direction the boat is facing. For this reason, the manufacturer may provide a compass deviation card for the boats steering compass. This card shows the extent of deviation for a given direction.
+
+\begin{center}
+	\includegraphics[width=0.9\linewidth]{resources/Magnetic-deviation.png} 
+    \captionof{figure}{Sample compass deviation card for a boats steering compass. Depending on the boats orientation, the reading on the compass will be off, for example, by just under 2° east when the boat is pointing north (000°) and by 4° west when it is pointing east (090°).}
+\end{center}
+
+
+In order to convert a reading from the chart into a reading on a compass, you must take both variation and deviation into account.
+
+The mnemonic TVMDC can be used to help with this process. The letters stand for:
+
+\begin{itemize}
+	\item True North
+	\item Variation
+	\item Magnetic
+	\item Deviation
+	\item Compass
+\end{itemize}
+
+In the previous example, our plotter indicated that our direction of travel should be 120°. This is the True North value but since our compass does not point to true North due to variation and deviation, we have to account for this.
+
+Let’s assume that the variation is 006° West. Based on the boat’s deviation chart, our deviation will be approximately 4.9° West so we need to account for both.
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+True & Variation & Magnetic & Deviation & Compass \\
+\hline
+120°\textsubscript{T} & 006°W & 126°\textsubscript{M} & 004.9°W & 130.9°\textsubscript{C} \\
+\hline
+\end{tabular}
+
+
+Note that the directions have a subscript of T, M or C for True, Magnetic and Compass respectively.
+
+
+\vspace{50pt}
+
+\begin{center}
+	\begin{tcolorbox}[
+	colback=gray!10,      % light grey background
+	colframe=black,       % border color
+	boxrule=0.5pt,        % thin border
+	arc=0pt,               % sharp corners (remove for rounded)
+	left=8pt, right=8pt, top=6pt, bottom=6pt,
+	width=0.8\linewidth,
+	]
+	\textbf{Why do we add the variation value?}\\
+	Imagine that you want to travel directly North. On a clock face, this would be directly up to the number 12. In the example above, the magnetic pole is 6° West so it's not pointing at 12, it's actually pointing at 11:59 and if we follow the compass, that's where we'll end up. To get to 12, we should add 6° on to our compass reading.\\
+	
+	The same logic obviously applies to the deviation value.
+	\end{tcolorbox}
+\end{center}
+
+
+\newpage
+\section{Tide Speed and Direction}
+A tidal table tells you at what time high water and low water will occur in a particular location. However, it does not tell you anything about the direction and speed of the tide, for that you need some additional information.
+
+One way of conveying this additional information is with the use of \textbf{\textit{Tidal Diamonds}}. A tidal diamond is a purple diamond shape on a chart with a letter inside (for example, the letter \textbf{F} shown below).
+
+\begin{center}
+	\includegraphics[width=0.7\linewidth]{resources/Tidal-diamond.jpg} 
+\end{center}
+
+
+Where tidal diamonds are used, the chart will include a lookup table so that the letter can be translated into speed and direction. An example is shown below:
+
+
+\begin{center}
+
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{5}{|c|}{{\large Tidal Point F}} \\
+	\hline
+	\multicolumn{2}{|c|}{Hours} & Dir & Sp & Np \\
+	\hline
+	\multirow{6}{*}{\rotatebox{90}{{\small Before High Water}}}
+	& 6 & 248 & 0.8 & 0.4 \\
+	& 5 & 067 & 0.5 & 0.3 \\
+	& 4 & 068 & 1.9 & 1.0 \\
+	& 3 & 071 & 2.6 & 1.5 \\
+	& \textcolor{blue}{2} & \textcolor{blue}{069} & \textcolor{blue}{2.3} & \textcolor{blue}{1.3} \\
+	& 1 & 068 & 1.2 & 0.6 \\
+	\hline
+	\multicolumn{2}{|c|}{\textbf{HW}} & \textbf{067} & \textbf{0.1} & \textbf{0.1} \\
+	\hline
+	\multirow{6}{*}{\rotatebox{90}{{\small After High Water}}}
+	& 1 & 248 & 0.9 & 0.5 \\
+	& 2 & 247 & 1.4 & 0.8 \\
+	& 3 & 251 & 1.8 & 1.0 \\
+	& 4 & 253 & 1.7 & 1.0 \\
+	& 5 & 250 & 1.6 & 0.9 \\
+	& 6 & 249 & 1.2 & 0.7 \\
+	\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+	Dir = Direction, Sp = Spring tide, Np = Neap tide\\
+\end{center}
+
+
+Imagine that you want to determine the tidal vector at point F at 14:30 on Saturday, 21st April. First, consult the tidal table for that day. Below is the required entry extracted from the table.
+
+\begin{tabular}{|c|c|c|}
+\hline
+\multirow{4}{*}{\textbf{\shortstack{21\\Sat}}} & 03:51 & 3.86 \\
+ & 09:45 & 0.66 \\
+ & 16:29 & 3.78 \\
+ & 22:09 & 0.96 \\
+\hline
+\end{tabular}
+
+According to this table, high water occurs at 16:29. We wish to know the tide at 14:30 so that’s 2 hours before high water. The entry we need is highlighted in blue above, it tells us that at point F, 2 hours before high water, the direction on the tide will be 068° and the speed will be 2.3 kts at spring tide and 1.3 kts at neap tide.
+
+Are we at a spring or a neap tide? According to the tide table, there's a spring tide on the 17th and 18th where the level reaches 4.11m. It then reaches a minimum of 3.49m on the 24th. On the 21st, we're about midway between a spring and a neap so we can pick the midway point between 2.3 kts and 1.3kts, that is, 1.8 kts.
+
+In conclusion, our tidal vector will be 068° at 1.8 kts.
+
+
+\newpage
+\section{Estimated Position Taking The Tide Into Account}
+
+If we were to travel from point F, due West (270°) at a speed of 8 kts, we might expect that after one hour, our position would be 8 nm (nautical miles) to the West of point F. However, since the tide is pushing us in direction 068° (approximately Northeast) at a speed of 1.8 kts, we will end up slightly to the North and we will have covered less distance as well.
+
+We have all of the information that we need in order to work out our estimated position after 1 hour, we can do this as follows:
 
 
 \end{document}
