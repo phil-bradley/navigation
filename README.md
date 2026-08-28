@@ -4,4 +4,4 @@ Notes on navigation, covering
 * Steering and sailing rules
 * Charts and tides
 
-The latest PDF version can be found [here](Notes.pdf). 
+The latest PDF version can be found [here](https://raw.githubusercontent.com/phil-bradley/navigation/main/Notes.pdf). 
