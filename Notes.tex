@@ -350,7 +350,7 @@ In the example below, the preferred channel is on the port side. The starboard c
 
 
 \newpage
-\section{Special Mark}
+\section{Special Marks}
 
 Special marks are used to indicate specific features of interest. The nature of the special feature should be clear from the chart on which the mark appears. Special features might include:
 
@@ -372,7 +372,7 @@ Special marks are yellow and may carry a top-mark in the form of an X. Special m
 
 
 \newpage
-\section{Safe Water Mark}
+\section{Safe Water Marks}
 Safe Water marks serve to indicate that there is navigable water all round the mark. These include centre line marks and mid-channel marks. Such a mark may also be used to indicate channel entrance, port or estuary approach, or landfall.
 
 Safe water marks may be either a sphere or else a spar or pillar with a spherical top-mark. They will always be coloured with red and white vertical stripes. The top-mark is a solid red colour.
@@ -388,7 +388,7 @@ Safe water marks may be either a sphere or else a spar or pillar with a spherica
 
 
 \newpage
-\section{Isolated Danger Mark}
+\section{Isolated Danger Marks}
 An isolated danger mark is placed on, or near to a danger that has navigable water all around it. The isolated danger mark has a distinctive top-mark consisting of two black spheres as shown below.
 
 
@@ -400,7 +400,7 @@ An isolated danger mark is placed on, or near to a danger that has navigable wat
 \end{center}
 
 \newpage
-\section{New Danger Mark}
+\section{New Danger Marks}
 The term “New Danger” is used to describe newly discovered hazards not yet shown in nautical documents. ‘New Dangers’ include naturally occurring obstructions such as sandbanks or rocks as well as man-made dangers such as wrecks.
 
 The mark may either be a pillar or a spar and may have a yellow cross top-mark.
@@ -709,25 +709,34 @@ Similarly, where marks have lights, the pattern is indicated using a code. Some 
 The pattern should be followed by a colour, for example \textit{\textbf{F R}} would indicate a fixed red light. With patterns other than fixed, a duration will also be required. For example, \textbf{\textit{Fl G 5s}} would indicate that a green light flashes every 5 seconds.
 
 \newpage
-The symbols used various marks, along with their colour indicators are shown below:
 
-\begin{longtable}{|c|c|}
+The symbols used for various marks, along with their colour indicators are shown below:
+
+% vertically centered, horizontally centered columns
+\newcolumntype{L}{>{\centering\arraybackslash}m{5cm}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{7cm}}
+
+\renewcommand{\arraystretch}{1.2} % a little extra row breathing room
+
+\begin{longtable}{|L|P|}
 	\hline
-	Port hand lateral marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_port.png} \\
+	Port hand lateral marks & \vspace{2mm}\includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_port.png}\vspace{2mm} \\
 	\hline
-	Starboard hand lateral marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_starboard.png} \\
+	Starboard hand lateral marks & \vspace{2mm}\includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_starboard.png}\vspace{2mm} \\
 	\hline
-	Preferred channel to port & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_perferred_port.png} \\
+	Preferred channel to port & \vspace{2mm}\includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_perferred_port.png}\vspace{2mm} \\
 	\hline
-	Preferred channel to starboard & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_preferred_starboard.png} \\	
+	Preferred channel to starboard & \vspace{2mm}\includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_lateral_preferred_starboard.png}\vspace{2mm} \\
 	\hline
-	Isolated danger mark & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_isolated_danger.png} \\	
+	Isolated danger mark & \vspace{2mm}\includegraphics[width=4cm]{resources/chart-symbols/chart_symbols_isolated_danger.png}\vspace{2mm} \\
 	\hline
-	Safe water marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_safe_water.png} \\	
+	Safe water marks & \vspace{2mm}\includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_safe_water.png}\vspace{2mm} \\
 	\hline
-	Cardinal marks & \includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_cardinal_marks.png} \\	
-	\hline	
+	Cardinal marks & \vspace{2mm}\includegraphics[width=6cm]{resources/chart-symbols/chart_symbols_cardinal_marks.png}\vspace{2mm} \\
+	\hline
 \end{longtable}
+
+
 
 
 \newpage
@@ -740,7 +749,7 @@ In addition to the depth markings, charts may also include indicators of the sea
 	\captionof{figure}{Seabed composition S.G.Wd}
 \end{center}
 
-A full table of seabed types is shown below
+A table of common seabed types is shown below
 
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|}
@@ -947,7 +956,7 @@ In conclusion, our tidal vector will be 068° at 1.8 kts.
 
 
 \newpage
-\section{Estimated Position Taking The Tide Into Account}
+\section{Estimating Position Taking The Tide Into Account}
 
 If we were to travel from point F, due West (270°) at a speed of 8 kts, we might expect that after one hour, our position would be 8 nm (nautical miles) to the West of point F. However, since the tide is pushing us in direction 068° (approximately Northeast) at a speed of 1.8 kts, we will end up slightly to the North and we will have covered less distance as well.
 
@@ -980,7 +989,7 @@ The line that joins the starting point to the blue dot is the ground track.
 
 
 \newpage
-\section{Plotting a Course To Steer}
+\section{Plotting a Course To Steer (CTS)}
 Continuing with the scenario above, let’s imagine we want to reach a point 10 nm West of point \textbf{\textit{F}}. We know that if we simply point the vessel due West we will not reach our destination. To work out what direction we should take, we can take the following steps:\\
 
 \textbf{Step 1}\\
@@ -1055,7 +1064,7 @@ So our course to steer (CTS) is 267°\textsubscript{C}.
 
 
 \newpage
-\section{Speed Over Ground (SOG)}
+\section{Calculating Speed Over Ground (SOG)}
 In the above example, we know that our speed over water will be 8 kts. What about our speed over ground? This is the effective speed that we will achieve when we take the tide into account.
 
 To figure out our speed over ground, we need to work out the length of the ground track. We can do this by extending the dividers over this line. Then place the dividers against the vertical (latitude) scale on the chart, this will give you the distance covered in nautical miles. One minute on the vertical scale corresponds to 1 nautical mile (this is the original definition of the nautical mile). In this case, it should be approximately 6.3 nm.
